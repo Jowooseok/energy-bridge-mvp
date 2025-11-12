@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -47,7 +47,7 @@ export default function Signup() {
 
   return (
     <div className="container flex items-center justify-center min-h-[calc(100vh-5rem)] py-10">
-      <Card className="w-full max-w-2xl shadow-2xl border-2">
+      <Card className="w-full max-w-2xl shadow-2xl border-2 animate-in fade-in slide-in-from-bottom-4 duration-700">
         <CardHeader className="space-y-3 pb-8">
           <div className="flex justify-center mb-2">
             <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-blue-600">
@@ -68,9 +68,9 @@ export default function Signup() {
                 <button
                   type="button"
                   onClick={() => setUserType('demand')}
-                  className={`group p-8 border-2 rounded-xl transition-all hover:shadow-lg ${
+                  className={`group p-8 border-2 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${
                     userType === 'demand'
-                      ? 'border-primary bg-primary/5 shadow-md'
+                      ? 'border-primary bg-primary/5 shadow-md scale-105'
                       : 'border-border hover:border-primary/50'
                   }`}
                 >
@@ -94,9 +94,9 @@ export default function Signup() {
                 <button
                   type="button"
                   onClick={() => setUserType('supplier')}
-                  className={`group p-8 border-2 rounded-xl transition-all hover:shadow-lg ${
+                  className={`group p-8 border-2 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${
                     userType === 'supplier'
-                      ? 'border-primary bg-primary/5 shadow-md'
+                      ? 'border-primary bg-primary/5 shadow-md scale-105'
                       : 'border-border hover:border-primary/50'
                   }`}
                 >

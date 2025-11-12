@@ -50,12 +50,12 @@ export default function Landing() {
 
         <div className="container relative px-4 md:px-6">
           <div className="flex flex-col items-center space-y-8 text-center">
-            <Badge variant="secondary" className="px-6 py-2 text-sm font-semibold shadow-sm">
+            <Badge variant="secondary" className="px-6 py-2 text-sm font-semibold shadow-sm animate-in fade-in slide-in-from-top-4 duration-700">
               <Zap className="mr-2 h-4 w-4" />
               AI 기반 자동 매칭 플랫폼
             </Badge>
 
-            <h1 className="max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-in fade-in slide-in-from-bottom-6 duration-1000">
               중소기업과 재생에너지를
               <br />
               <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
@@ -63,13 +63,13 @@ export default function Landing() {
               </span>
             </h1>
 
-            <p className="mx-auto max-w-[700px] text-lg text-muted-foreground md:text-xl leading-relaxed">
+            <p className="mx-auto max-w-[700px] text-lg text-muted-foreground md:text-xl leading-relaxed animate-in fade-in duration-1000 delay-200">
               Energy Bridge는 AI 기반 매칭으로 72시간 내에 최적의 재생에너지 공급자를 찾아드립니다.
               <br />
               <span className="font-semibold text-primary">전기요금 15-25% 절감, RE100 목표 달성을 지금 시작하세요.</span>
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            <div className="flex flex-col sm:flex-row gap-4 mt-4 animate-in fade-in duration-1000 delay-300">
               <Button size="lg" asChild className="shadow-lg hover:shadow-xl transition-shadow">
                 <Link to="/signup" className="inline-flex items-center justify-center">
                   무료로 시작하기
@@ -112,7 +112,8 @@ export default function Landing() {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="relative overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-lg group"
+                className="relative overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-2 group animate-in fade-in slide-in-from-bottom-4"
+                style={{ animationDelay: `${index * 100}ms`, animationDuration: '700ms' }}
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
                 <CardHeader className="relative">

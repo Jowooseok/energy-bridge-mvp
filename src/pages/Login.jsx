@@ -63,7 +63,7 @@ export default function Login() {
 
   return (
     <div className="container flex items-center justify-center min-h-[calc(100vh-5rem)] py-10">
-      <Card className="w-full max-w-md shadow-2xl border-2">
+      <Card className="w-full max-w-md shadow-2xl border-2 animate-in fade-in slide-in-from-bottom-4 duration-700">
         <CardHeader className="space-y-3 pb-8">
           <div className="flex justify-center mb-2">
             <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-blue-600">
